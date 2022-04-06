@@ -12,10 +12,12 @@
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_to_registerFragment"
-            app:destination="@id/registerFragment" />
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/registerFragment" />
         <action
             android:id="@+id/action_to_helpFragment"
-            app:destination="@id/helpFragment" />
+            app:destination="@id/helpFragment"
+            app:popUpTo="@id/helpFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -34,7 +36,8 @@
         tools:layout="@layout/fragment_book_list">
         <action
             android:id="@+id/action_to_BookDetail"
-            app:destination="@id/bookDetailFragment" />
+            app:destination="@id/bookDetailFragment"
+            app:popUpTo="@id/bookDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/bookDetailFragment"
@@ -57,7 +60,8 @@
         tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_to_updateFragment"
-            app:destination="@id/updateFragment" />
+            app:destination="@id/updateFragment"
+            app:popUpTo="@id/updateFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"

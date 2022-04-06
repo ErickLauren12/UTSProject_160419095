@@ -24,7 +24,7 @@ class BookDetailModel(application: Application) : AndroidViewModel(application) 
         loadingLiveData.value = true
 
         rQueue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.18.19/Advance/$id.json"
+        val url = "http://192.168.18.19/Advance/library.php?id=$id"
         val sType = object : TypeToken<Book>(){}.type
         Log.d("Result Detail", id)
         val stringRequest = StringRequest(

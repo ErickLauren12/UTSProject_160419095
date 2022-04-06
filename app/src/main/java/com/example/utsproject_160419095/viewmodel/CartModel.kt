@@ -24,7 +24,7 @@ class CartModel(application: Application) : AndroidViewModel(application) {
         loadingLiveData.value = true
 
         rQueue = Volley.newRequestQueue(getApplication())
-        val url = "http://192.168.18.19/Advance/cart.json"
+        val url = "http://192.168.18.19/Advance/library.php?cart='yes'"
         val sType = object : TypeToken<ArrayList<Book>>() {}.type
 
         val stringRequest = StringRequest(

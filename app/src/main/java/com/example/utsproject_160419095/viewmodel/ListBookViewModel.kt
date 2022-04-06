@@ -1,6 +1,7 @@
 package com.example.utsproject_160419095.viewmodel
 
 import android.app.Application
+import android.text.Html
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.android.volley.Request
@@ -24,7 +25,7 @@ class ListBookViewModel(application: Application) : AndroidViewModel(application
         loadingLiveData.value = true
         bookLoadErrorLiveData.value = false
 
-        val url = "http://192.168.18.19/Advance/book.json"
+        val url = "http://192.168.18.19/Advance/library.php"
         val sType = object : TypeToken<ArrayList<Book>>() {}.type
 
         val stringRequest = StringRequest(
