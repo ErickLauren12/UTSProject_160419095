@@ -71,6 +71,6 @@
     <fragment
         android:id="@+id/ItemCart"
         android:name="com.example.utsproject_160419095.view.CartFragment"
-        android:label="fragment_cart"
+        android:label="Cart"
         tools:layout="@layout/fragment_cart_list" />
 </navigation>
