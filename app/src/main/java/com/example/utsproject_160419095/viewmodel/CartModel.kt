@@ -25,15 +25,12 @@ class CartModel(application: Application) : AndroidViewModel(application) {
 
         rQueue = Volley.newRequestQueue(getApplication())
         val url = "http://192.168.18.19/Advance/library.php?cart='yes'"
-        val sType = object : TypeToken<ArrayList<Book>>() {}.type
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             {
-                val result = Gson().fromJson<ArrayList<Book>>(it, sType)
-
                 loadingLiveData.value = false
-                cartLiveData.value = result
+                cartLiveData.value = Gson().fromJson<ArrayList<Book>>(it, object : TypeToken<ArrayList<Book>>() {}.type)
             },
             {
                 loadingLiveData.value = false

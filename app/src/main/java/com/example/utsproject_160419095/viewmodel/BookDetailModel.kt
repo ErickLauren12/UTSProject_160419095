@@ -25,15 +25,12 @@ class BookDetailModel(application: Application) : AndroidViewModel(application) 
 
         rQueue = Volley.newRequestQueue(getApplication())
         val url = "http://192.168.18.19/Advance/library.php?id=$id"
-        val sType = object : TypeToken<Book>(){}.type
         Log.d("Result Detail", id)
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             {
-                val result = Gson().fromJson<Book>(it, sType)
-
                 loadingLiveData.value = false
-                bookLiveData.value = result
+                bookLiveData.value = Gson().fromJson<Book>(it,object : TypeToken<Book>(){}.type)
                 Log.d("ShowVolley", it)
             },
             {

@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.utsproject_160419095.R
 import com.example.utsproject_160419095.viewmodel.CartModel
-import kotlinx.android.synthetic.main.fragment_cart.*
+import kotlinx.android.synthetic.main.fragment_cart_list.*
 
 class CartFragment : Fragment() {
     private  lateinit var  viewModel: CartModel
@@ -20,7 +20,7 @@ class CartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        return inflater.inflate(R.layout.fragment_cart_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

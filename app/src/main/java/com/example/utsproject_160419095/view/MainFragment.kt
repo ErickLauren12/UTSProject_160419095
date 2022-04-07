@@ -23,13 +23,11 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnCreate.setOnClickListener {
-            val action = MainFragmentDirections.actionToRegisterFragment()
-            Navigation.findNavController(it).navigate(action)
+            Navigation.findNavController(it).navigate(MainFragmentDirections.actionToRegisterFragment())
         }
 
         btnHelp.setOnClickListener {
-            val action = MainFragmentDirections.actionToHelpFragment()
-            Navigation.findNavController(it).navigate(action)
+            Navigation.findNavController(it).navigate(MainFragmentDirections.actionToHelpFragment())
         }
     }
 }

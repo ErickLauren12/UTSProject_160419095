@@ -26,15 +26,12 @@ class ListBookViewModel(application: Application) : AndroidViewModel(application
         bookLoadErrorLiveData.value = false
 
         val url = "http://192.168.18.19/Advance/library.php"
-        val sType = object : TypeToken<ArrayList<Book>>() {}.type
 
         val stringRequest = StringRequest(
             Request.Method.GET, url,
             {
-                val result = Gson().fromJson<ArrayList<Book>>(it, sType)
-
                 loadingLiveData.value = false
-                bookLiveData.value = result
+                bookLiveData.value = Gson().fromJson<ArrayList<Book>>(it, object : TypeToken<ArrayList<Book>>() {}.type)
             },
             {
                 bookLoadErrorLiveData.value = true

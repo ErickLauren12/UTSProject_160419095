@@ -23,8 +23,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         btnUpdate.setOnClickListener {
-            val action = ProfileFragmentDirections.actionToUpdateFragment()
-            Navigation.findNavController(it).navigate(action)
+            Navigation.findNavController(it).navigate(ProfileFragmentDirections.actionToUpdateFragment())
         }
     }
 }

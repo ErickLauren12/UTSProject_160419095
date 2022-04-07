@@ -23,8 +23,7 @@ class BookDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel = ViewModelProvider(this).get(BookDetailModel::class.java)
-        val id = BookDetailFragmentArgs.fromBundle(requireArguments()).bookId
-        viewModel.detail(id)
+        viewModel.detail(BookDetailFragmentArgs.fromBundle(requireArguments()).bookId)
 
         observeViewModel()
     }
